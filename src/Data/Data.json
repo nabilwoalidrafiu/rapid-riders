@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "name": "Bike",
+    "cost": "$10",
+    "img": "https://i.ibb.co/zmWsHyG/Frame.png",
+    "capacity": 2
+  }, {
+    "id": 2,
+    "name": "Car",
+    "cost": "$30",
+    "img": "https://i.ibb.co/R7GgxVV/Frame-2.png",
+    "capacity": 4
+  }, {
+    "id": 3,
+    "name": "Bus",
+    "cost": "$20",
+    "img": "https://i.ibb.co/0Ymjk1Q/Frame-1.png",    
+    "capacity": 20
+  }, {
+    "id": 4,
+    "name": "Train",
+    "cost": "$15",
+    "img": "https://i.ibb.co/vcrvQts/Group.png",
+    "capacity": 40
+  }]
