@@ -5,6 +5,7 @@ import { UserContext } from '../../App';
 import {} from './Destination.css'
 import { useParams } from 'react-router';
 import SimpleMap from '../SimpleMap/SimpleMap';
+import peopleicon from './peopleicon.png'
 
 const Destination = (props) => {
     const {id} = useParams();
@@ -31,21 +32,35 @@ const Destination = (props) => {
                 <div className="col-md-4">
                 <form className='ship-form' onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="">Pick From</label>    
-            <input name="example" defaultValue="test" ref={register({ required: true })}/>
+            <input name="example"  ref={register({ required: true })}/>
             <br/>
             <label htmlFor="">Pick To</label>    
             <input name="exampleRequired" ref={register({ required: true })} />
             <br/>
             {errors.exampleRequired && <span className='error'>This field is required</span>}
             
-            <input type="submit" />
+            {submit ==false && <input type="submit" />}
             {
               submit && 
-              <div className='rider-name d-flex justify-content-around'>
+              <div style={{}} >
+                  <div className='rider-name d-flex justify-content-around bg-light p-1'>
                   <img src={riders.img} height='40px' width='50px' alt=""/>
                   <h5>{riders.name}</h5>
-                  <h5>{riders.capacity}</h5>
+                  <h5><img src={peopleicon} alt="" height="20px" width="20px"/> {riders.capacity}</h5>
                   <h5>{riders.cost}</h5>
+              </div>
+              <div className='rider-name d-flex justify-content-around bg-light p-1'>
+                <img src={riders.img} height='40px' width='50px' alt=""/>
+                <h5>{riders.name}</h5>
+                <h5><img src={peopleicon} alt="" height="20px" width="20px"/> {riders.capacity}</h5>
+                <h5>{riders.cost}</h5>
+             </div>
+             <div className='rider-name d-flex justify-content-around bg-light p-1'>
+                <img src={riders.img} height='40px' width='50px' alt=""/>
+                <h5>{riders.name}</h5>
+                <h5><img src={peopleicon} alt="" height="20px" width="20px"/> {riders.capacity}</h5>
+                <h5>{riders.cost}</h5>
+             </div>
               </div>
             }
             
