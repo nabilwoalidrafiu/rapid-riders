@@ -9,7 +9,7 @@ const Home = () => {
         setRider(riderData)
     },[])
     return (
-        <div style={{ height: "800px", backgroundImage: `url(${w1})`,  backgroundPosition: 'center', backgroundSize: 'cover' ,opacity: 0.7 }}>
+        <div style={{ height: "600px", backgroundImage: `url(${w1})`,  backgroundPosition: 'center', backgroundSize: 'cover' }}>
             <div className='text-center row row-cols-1 row-cols-md-3 g-4'>
                 {
                     riderData.map(rider => <Rider key={rider.id} rider= {rider}>{rider.name}</Rider>)
