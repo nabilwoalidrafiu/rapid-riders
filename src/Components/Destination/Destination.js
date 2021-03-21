@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { UserContext } from '../../App';
 import {} from './Destination.css'
 import { useParams } from 'react-router';
+import SimpleMap from '../SimpleMap/SimpleMap';
 
 const Destination = (props) => {
     const {id} = useParams();
@@ -26,9 +27,9 @@ const Destination = (props) => {
     // console.log(watch("example"));
     return (
         <div >
-            <h1 >This is Destination</h1>
-            <h2>Rider: {id}</h2>
-            <form className='ship-form' onSubmit={handleSubmit(onSubmit)}>
+            <div className="row">
+                <div className="col-md-4">
+                <form className='ship-form' onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="">Pick From</label>    
             <input name="example" defaultValue="test" ref={register({ required: true })}/>
             <br/>
@@ -50,6 +51,12 @@ const Destination = (props) => {
             
             
             </form>
+                </div>
+                <div className="col-md-8">
+                    <SimpleMap></SimpleMap>
+                </div>
+            </div>
+            
             
         </div>
     );

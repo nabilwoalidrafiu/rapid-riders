@@ -9,7 +9,7 @@ const Rider = (props) => {
     }
     return (
         <div className="team-card col-sm-8 col-md-3 mt-5">
-            <div onClick={handleRider} className="rider card bg-primary h-100 shadow">
+            <div onClick={handleRider} className="rider card h-100 shadow">
                 <div className="card-photo m-auto w-75">
                     <img src={img} className="card-img-top w-100" alt="..."/>
                 </div>
